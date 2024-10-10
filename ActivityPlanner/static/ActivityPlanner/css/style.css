@@ -1,0 +1,15 @@
+body {
+    background-color: #fcfcfc;
+}
+
+#home-section {
+    margin-top: 5rem !important;
+}
+
+div.form-control {
+    border: 1px solid #ced4da;
+}
+
+#enter-course {
+    margin-top: 6rem !important;
+}

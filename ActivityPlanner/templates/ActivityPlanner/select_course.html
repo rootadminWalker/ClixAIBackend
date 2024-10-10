@@ -1,0 +1,30 @@
+{% extends 'ActivityPlanner/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Please select your semester</h1>
+            </div>
+            <div class="flex-row text-center mt-4">
+                <button class="btn btn-outline-primary mx-2 fs-2 session-select" id="fall">Fall</button>
+                <button class="btn btn-outline-primary mx-2 fs-2 session-select" id="winter">Winter</button>
+                <button class="btn btn-outline-primary mx-2 fs-2 session-select" id="summer">Summer</button>
+            </div>
+            <h1 id="enter-course">Please enter your courses</h1>
+            <div class="input-group mt-3">
+                <select class="form-select w-0" id="DivisionSelector">
+                    <option selected value="">Select a Division</option>
+                </select>
+                <input disabled id="courseInput" type="text" class="form-control" placeholder="Please select a division" aria-label="Please select a division" aria-describedby="basic-addon1">
+                <button class="btn btn-success" id="searchCourse">Search</button>
+            </div>
+            <div id="result-area" class="list-group p-4 mt-4"></div>
+            <div id="submitSchedule" style="display: none">
+                <button id="submitButton" class="btn btn-primary">Selected</button>
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript" src="{% static 'ActivityPlanner/js/api_funcs.js' %}"></script>
+    <script type="application/javascript" src="{% static 'ActivityPlanner/js/select_course.js' %}"></script>
+{% endblock %}
