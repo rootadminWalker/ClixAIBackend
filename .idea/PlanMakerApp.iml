@@ -17,6 +17,9 @@
     <orderEntry type="jdk" jdkName="Python 3.8.10 WSL (Ubuntu-20.04): (/home/rootadminwalker/workspace/normal_projects/PlanMakerApp/venv/bin/python)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="PackageRequirementsSettings">
+    <option name="removeUnused" value="true" />
+  </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />
     <option name="myDocStringFormat" value="Plain" />
