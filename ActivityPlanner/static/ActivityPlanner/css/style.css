@@ -2,6 +2,11 @@ body {
     background-color: #fcfcfc;
 }
 
+nav.navbar {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 #home-section {
     margin-top: 5rem !important;
 }

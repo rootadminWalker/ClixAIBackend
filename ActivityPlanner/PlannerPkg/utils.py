@@ -1,5 +1,4 @@
-from copy import copy
-from datetime import datetime, time, timedelta
+from datetime import datetime, time, timedelta, date
 
 
 def get_closest_event_start_date(event_weekday: int, semester_start_date: datetime) -> datetime:
@@ -23,13 +22,13 @@ def str_weekday_to_idx(weekday: str):
     return ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].index(weekday.lower())
 
 
-def str_date_to_datetime(str_date: str) -> datetime:
+def str_date_to_datetime(str_date: str) -> date:
     """
     Convert string date to datetime.date format
     :param str_date: YYYY-MM-DD
     :return: datetime.datetime
     """
-    return datetime.strptime(str_date, '%Y-%m-%d')
+    return (datetime.strptime(str_date, '%Y-%m-%d')).date()
 
 
 def milliseconds_to_time(milliseconds: int) -> time:

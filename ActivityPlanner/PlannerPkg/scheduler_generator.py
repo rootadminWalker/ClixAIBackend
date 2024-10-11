@@ -3,7 +3,7 @@ import uuid
 import warnings
 from abc import ABC, abstractmethod
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, date
 from datetime import timedelta, time
 
 import icalendar
@@ -225,7 +225,7 @@ class BetaStudyScheduleGenerator(BaseStudyScheduleGenerator):
         # Adjust priorities based on deadlines and durations
         for task in self.tasks:
             # Increase priority for tasks with imminent deadlines
-            days_until_deadline = (task.latest_end_date - datetime.today()).days
+            days_until_deadline = (task.latest_end_date - date.today()).days
             if days_until_deadline <= 3:
                 task.priority += 20
             elif days_until_deadline <= 7:
@@ -357,6 +357,7 @@ class BetaStudyScheduleGenerator(BaseStudyScheduleGenerator):
                 else:
                     # Schedule within preferred study hours
                     start_time = current_time
+                    # print(datetime.combine(date, start_time))
                     end_time = (datetime.combine(date, start_time) + timedelta(hours=task.duration)).time()
                     if end_time > self.preferred_study_end:
                         # Adjust to preferred study hours
