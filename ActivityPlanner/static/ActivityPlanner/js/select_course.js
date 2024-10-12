@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('.session-select').click(function (e) {
         let id = this.id;
         $.ajax({
-            url: "/select_session/",
+            url: "/select_course/",
             headers: {'X-CSRFToken': csrftoken},
             type: "POST",
             data: {'session': id}
