@@ -52,7 +52,7 @@ def login(request):
     return HttpResponse('<h2>Hi motherfucker!</h2>')
 
 
-def select_session(request):
+def select_course(request):
     if request.method == 'POST':
         print(request.POST)
         return JsonResponse({'proceed': True})
