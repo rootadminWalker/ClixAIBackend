@@ -1,1 +1,1 @@
-# PlanMaker App server
+# ClixAI App server
