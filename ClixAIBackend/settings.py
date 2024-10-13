@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ActivityPlanner.apps.ActivityplannerConfig',
+    'Accounts.apps.AccountsConfig'
     # 'corsheaders'
 ]
 
