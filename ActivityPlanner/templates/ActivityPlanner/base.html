@@ -22,37 +22,6 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"
         integrity="sha256-WCzAhd2P6gRJF9Hv3oOOd+hFJi/QJbv+Azn4CGB8gfY=" crossorigin="anonymous"></script>
-<header class="fixed-top">
-    <nav class="navbar navbar-expand-md bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">PlanMaker</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="navbar-nav me-auto mb-2 mb-md-0">
-                    <a class="nav-item nav-link active" aria-current="page" href="/">Home</a>
-                    <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
-                    <a class="nav-item nav-link" href="{% url 'select_course' %}">Planner</a>
-                    <a class="nav-item nav-link">About</a>
-                </div>
-                <div class="navbar-nav ms-auto mb-2 mb-md-0">
-                    <div class="nav-item dropdown d-none d-md-block">
-                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"
-                           style="padding: 0.2rem 0;"><img src="" alt="Account"
-                                                           id="navbar-profile-img" class="rounded rounded-circle"></a>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar-profile-img">
-                            <a class="dropdown-item active" href="#">Account</a>
-                            <a class="dropdown-item" href="#">Signout</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+{% include 'ActivityPlanner/navbar.html' %}
 {% block content %}{% endblock %}
 </body>

@@ -5,6 +5,7 @@ let autocomplete_courses = [];
 let current_course, current_section_code;
 
 $(document).ready(function () {
+    $("button#submitButton").hide()
     $('.session-select').click(function (e) {
         let id = this.id;
         $.ajax({
@@ -122,7 +123,7 @@ $(document).ready(function () {
                                 </div>
                             `;
                 }
-                $("div#submitSchedule").css("display", "block");
+                $("button#submitButton").show();
                 $("div#result-area").append(append_html);
             }
         );
